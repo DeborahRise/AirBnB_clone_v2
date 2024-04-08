@@ -11,6 +11,9 @@ env.hosts = ['54.82.172.244', '100.27.14.106']
 
 
 def do_deploy(archive_path):
+    """
+    deploy
+    """
     if (os.path.isfile(archive_path) is False):
         return False
 
@@ -26,5 +29,5 @@ def do_deploy(archive_path):
         run("sudo rm -rf /data/web_static/current")
         run("sudo ln -s {} /data/web_static/current".format(ndir))
         return True
-    except:
+    except Exception:
         return False
