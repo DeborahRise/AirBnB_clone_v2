@@ -5,7 +5,7 @@ full deployment, of hbnb
 
 import os.path
 import time
-from fabric.operations import run, put, sudo
+from fabric.operations import run, put
 from fabric.api import env, local
 env.hosts = ['54.82.172.244', '100.27.14.106']
 
