@@ -3,8 +3,7 @@
 distributes an archive to your web servers
 """
 
-from fabric.api import local
-from fabric.operations import run, put, sudo
+from fabric.operations import run, put
 import os.path
 from fabric.api import env
 env.hosts = ['54.82.172.244', '100.27.14.106']
