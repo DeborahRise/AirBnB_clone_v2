@@ -57,7 +57,10 @@ def deploy():
     """
     try:
         archive_address = do_pack()
+        if not archive_address:
+            return False
         val = do_deploy(archive_address)
         return val
     except Exception:
         return False
+
