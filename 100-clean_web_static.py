@@ -7,7 +7,7 @@ import os
 import os.path
 import time
 from fabric.operations import run, put
-from fabric.api import env, local
+from fabric.api import *
 env.hosts = ['54.82.172.244', '100.27.14.106']
 
 
@@ -63,7 +63,8 @@ def deploy():
     except Exception:
         return False
 
-    def do_clean(number=0):
+
+def do_clean(number=0):
     number = 1 if int(number) == 0 else int(number)
 
     files = sorted(os.listdir("versions"))
