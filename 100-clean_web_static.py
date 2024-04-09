@@ -7,7 +7,7 @@ import os
 import os.path
 import time
 from fabric.operations import run, put
-from fabric.api import *
+from fabric.api import env, local, lcd, cd
 env.hosts = ['54.82.172.244', '100.27.14.106']
 
 
