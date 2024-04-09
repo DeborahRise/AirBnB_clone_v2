@@ -65,6 +65,9 @@ def deploy():
 
 
 def do_clean(number=0):
+    """ The do_clean function
+    as the name implies
+    """
     number = 1 if int(number) == 0 else int(number)
 
     files = sorted(os.listdir("versions"))
