@@ -63,4 +63,3 @@ def deploy():
         return val
     except Exception:
         return False
-
