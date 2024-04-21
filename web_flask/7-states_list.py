@@ -10,6 +10,7 @@ from models.state import State
 
 app = Flask(__name__)
 
+
 @app.teardown_appcontext
 storage.close()
 
@@ -17,11 +18,11 @@ storage.close()
 @app.route('/states_list', strict_slashes=False)
 def states_list():
     """
-    display a HTML page: 
+    display a HTML page:
     """
     states = storage.all(State).order_by(State.name).all()
 
-    return render_template("7-states_list.html",states=states )
+    return render_template("7-states_list.html", states=states)
 
 
 if __name__ == '__main__':
