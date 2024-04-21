@@ -45,16 +45,12 @@ def python_text(text="is cool"):
     return "Python " + new_text
 
 
-@app.route('/number/<n>', strict_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def number_n(n):
     """
     Outputs "n is a number” only if n is an integer
     """
-    try:
-        int(n)
-        return ("{} is a number".format(n))
-    except ValueError:
-        return
+    return ("{} is a number".format(n))
 
 
 if __name__ == '__main__':
