@@ -21,7 +21,7 @@ def states_list():
     """
     display a HTML page:
     """
-    states = storage.all(State).order_by(State.name).all()
+    states = storage.all("State")
 
     return render_template("7-states_list.html", states=states)
 
