@@ -20,8 +20,7 @@ class State(BaseModel, Base):
             "City", backref="state", cascade="all, delete, delete-orphan"
         )
 
-    elif getenv("HBNB_TYPE_STORAGE") == "file":
-
+    else:
         @property
         def cities(self):
             """Returns a list of cities with the same state_id"""
