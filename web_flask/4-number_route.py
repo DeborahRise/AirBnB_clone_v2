@@ -53,9 +53,8 @@ def number_n(n):
     try:
         int(n)
         return ("{} is a number".format(n))
-    except:
+    except ValueError:
         return
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
