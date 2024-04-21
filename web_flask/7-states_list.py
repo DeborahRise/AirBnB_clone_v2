@@ -21,10 +21,10 @@ def states_list():
     """
     display a HTML page:
     """
-    states = storage.all("State")
+    states = storage.all(State).order_by(State.name).all()
 
     return render_template("7-states_list.html", states=states)
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', debug=True)
