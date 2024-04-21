@@ -54,7 +54,8 @@ def number_n(n):
         int(n)
         return ("{} is a number".format(n))
     except ValueError:
-        return
+        return 'Not a Number'
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
