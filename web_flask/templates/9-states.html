@@ -1,17 +1,17 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <HTML lang="en">
 <HEAD>
     <TITLE>HBNB</TITLE>
 </HEAD>
 <BODY>
-    {% if state is defined and state.items is defined %}
+    {% if state is mapping %}
     <H1>States</H1>
     <UL>
         {% for st in state.values() | sort(attribute="name") %}
             <LI>{{st.id}}: <B> {{st.name}} </B></LI>
         {% endfor %}
     </UL>
-    {% elif state %}
+    {% elif state is defined %}
         <H1>State: {{state.name}} </H1>
         <H3>Cities:</H3>
         <UL>
